@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
@@ -49,21 +48,4 @@ int nBinaryToDecimal(const char *binary)
 	free(complement);
 	complement = 0;
 	return decimal;
-}
-
-int main(int ac, char **av)
-{
-	int cnt, binary;
-
-	cnt = 1;
-	while (cnt < ac)
-	{
-		if (av[cnt][0] == '1')
-			binary = nBinaryToDecimal(av[cnt]);
-		else
-			binary = pBinaryToDecimal(av[cnt]);
-		printf("%d\n", binary);
-		cnt++;
-	}
-	return 0;
 }
