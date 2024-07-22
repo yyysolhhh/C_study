@@ -2,15 +2,17 @@
 
 int main(void)
 {
-	int i, ans;
+	int i, byte;
+	long ans;
 
-	i = 0;
+	byte = 4;
 	ans = 1;
-	while (i < 4)
+	i = 0;
+	while (i < byte * 8)
 	{
 		ans *= 2;
 		i++;
 	}
-	printf("%d", ans);
+	printf("%d^%d가지 %ld", 2, byte * 8, ans);
 	return 0;
 }
