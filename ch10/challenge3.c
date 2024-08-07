@@ -16,7 +16,10 @@ int get_gcm1(int a, int b)
 // Euclidean algorithm
 int get_gcm2(int a, int b)
 {
-	return b ? get_gcm2(b, a % b) : a;
+	if (b == 0)
+		return a;
+	return get_gcm2(b, a % b);
+	//return b ? get_gcm2(b, a % b) : a;
 }
 
 int main(void)
