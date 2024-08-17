@@ -25,11 +25,7 @@ int main(void)
 	int arr[10];
 	printf("총 10개의 숫자 입력: \n");
 	for (int i = 0; i < 10; i++)
-	{
-		int n;
-		scanf("%d", &n);
-		arr[i] = n;
-	}
+		scanf("%d", &arr[i]);
 	print_odd(arr);
 	printf("\n");
 	print_even(arr);

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void print_arr(int *arr, int size)
 {
@@ -31,17 +32,17 @@ void des_bubblesort(int *arr, int size)
 
 int main(void)
 {
-	int arr[7];
+	int *arr;
 	int size;
-	int n;
 
 	size = 7;
+	if (!(arr = (int *)malloc(sizeof(int) * size)))
+		return 1;
 	for (int i = 0; i < size; i++)
-	{
-		scanf("%d", &n);
-		arr[i] = n;
-	}
+		scanf("%d", &arr[i]);
 	des_bubblesort(arr, size);
 	print_arr(arr, size);
+	free(arr);
+	arr = 0;
 	return 0;
 }

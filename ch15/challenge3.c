@@ -11,15 +11,9 @@ int main(void)
 	{
 		scanf("%d", &n);
 		if (n % 2 == 1)
-		{
-			arr[f] = n;
-			f++;
-		}
+			arr[f++] = n;
 		else
-		{
-			arr[b] = n;
-			b--;
-		}
+			arr[b--] = n;
 	}
 	printf("배열 요소의 출력: ");
 	for (int i = 0; i < 10; i++)
