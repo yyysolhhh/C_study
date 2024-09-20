@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-extern int cal_num;
+//extern int cal_num;
+//extern double add(double a, double b);
+//extern double minus(double a, double b);
+//extern double multiple(double a, double b);
+//extern double divide(double a, double b);
 
-extern double add(double a, double b);
-extern double minus(double a, double b);
-extern double multiple(double a, double b);
-extern double divide(double a, double b);
+#include "calculator.h"
 
 int main()
 {
