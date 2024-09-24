@@ -18,6 +18,6 @@ void delete(int *count);
 int search(t_data *phonebook, int *count);
 void print_all(t_data *phonebook, int *count);
 int load_data(t_data *phonebook, int *count);
-int save_to_file(t_data *phonebook, int count);
+int save_data(t_data *phonebook, int count);
 
 #endif

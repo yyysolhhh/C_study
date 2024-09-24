@@ -3,7 +3,7 @@ SRCS	 = $(wildcard *.c)
 INCL	 = $(wildcard *.h)
 OBJDIR   = obj
 OBJS	 = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
-TEXT 	 = $(NAME).txt
+TEXT 	 = phonebook.txt
 
 CC		 = gcc
 CFLAGS	 = -Wall -Wextra -Werror

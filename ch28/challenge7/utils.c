@@ -1,9 +1,10 @@
+#include <string.h>
 #include "phonebook.h"
 
-//static void clear_buffer()
-//{
-//	while(getchar() != '\n');
-//}
+static void remove_linefeed(char *str)
+{
+	str[strcspn(str, "\n")] = '\0';
+}
 
 int insert(t_data *phonebook, int *count)
 {
@@ -13,12 +14,12 @@ int insert(t_data *phonebook, int *count)
 		return 0;
 	printf("\n[INSERT]\n");
 	printf("Input name: ");
-	//clear_buffer();
 	fflush(stdin);
 	fgets(data.name, LEN, stdin);
+	remove_linefeed(data.name);
 	printf("Input phone number: ");
-	fflush(stdin);
 	fgets(data.phone, LEN, stdin);
+	remove_linefeed(data.phone);
 	phonebook[*count] = data;
 	(*count)++;
 	return 1;
@@ -41,7 +42,7 @@ int search(t_data *phonebook, int *count)
 	scanf("%s", keyword);
 	for (int i = 0; i < *count; i++)
 	{
-		if (phonebook[i].name == keyword || phonebook[i].phone == keyword)
+		if (!strcmp(phonebook[i].name, keyword) || !strcmp(phonebook[i].phone, keyword))
 		{
 			printf("Name: %s | Phone: %s\n", phonebook[i].name, phonebook[i].phone);
 			cnt++;

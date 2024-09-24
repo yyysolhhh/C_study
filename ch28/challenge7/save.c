@@ -1,18 +1,23 @@
+#include <string.h>
 #include "phonebook.h"
 
 int load_data(t_data *phonebook, int *count)
 {
 	FILE *file;
+	char name[LEN], phone[LEN];
 
+	*count = 0;
 	file = fopen(FILENAME, "rt");
 	if (!file)
 		return 0;
-	*count = 0;
-	while (1)
+	while (!feof(file))
 	{
-		fscanf(file, "%s %s", phonebook[*count].name, phonebook[*count].phone);
-		if (feof(file))
+		if (fscanf(file, "%s %s", name, phone) != 2)
 			break;
+		if (strlen(name) == 0 || strlen(phone) == 0)
+			continue;
+		strlcpy(phonebook[*count].name, name, LEN);
+		strlcpy(phonebook[*count].phone, phone, LEN);
 		(*count)++;
 	}
 	if (fclose(file))
@@ -20,7 +25,7 @@ int load_data(t_data *phonebook, int *count)
 	return 1;
 }
 
-int save_to_file(t_data *phonebook, int count)
+int save_data(t_data *phonebook, int count)
 {
 	FILE *file;
 	

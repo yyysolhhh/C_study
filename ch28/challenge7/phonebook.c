@@ -57,7 +57,7 @@ int main(void)
 			break;
 		run(item, phonebook, &count);
 	}
-	if (save_to_file(phonebook, count))
+	if (save_data(phonebook, count))
 		printf("File save completed\n");
 	free(phonebook);
 	return 0;
