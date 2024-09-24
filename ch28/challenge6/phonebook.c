@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include "phonebook.h"
 
-void print_menu()
+static void print_menu()
 {
 	printf("\n-----Menu-----\n");
 	printf("1. Insert\n2. Delete\n3. Search\n4. Print All\n5. Exit\n");
 	printf("Choose the item: ");
 }
 
-void run(int item, t_data *phonebook, int *count)
+static void run(int item, t_data *phonebook, int *count)
 {
 	int result;
 
