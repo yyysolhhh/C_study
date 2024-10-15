@@ -11,7 +11,7 @@ void LInsert(List * plist, LData data)
 {
 	if(plist->numOfData > LIST_LEN) 
 	{
-		puts("¿¿¿ ¿¿¿¿¿¿.");
+		puts("ì €ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.");
 		return;
 	}
 
