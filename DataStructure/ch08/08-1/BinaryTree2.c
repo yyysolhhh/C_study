@@ -77,6 +77,7 @@ void DeleteNode(BTreeNode * bt)
 {
 	printf("%d\n", bt->data);
 	free(bt);
+	bt = NULL;
 }
 
 void DeleteTree(BTreeNode * bt)
@@ -92,4 +93,5 @@ void DeleteTree2(BTreeNode * bt)
 	DeleteTree2(bt->right);
 	printf("del: %d\n", bt->data);
 	free(bt);
+	bt = NULL;
 }

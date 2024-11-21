@@ -33,7 +33,7 @@ int main(void)
 	PreorderTraverse(bt1, ShowIntData);
 	printf("\n");
 
-	DeleteTree2(bt3);
+	DeleteTree(bt3);
 
 	printf("after\n");
 	PreorderTraverse(bt1, ShowIntData);
