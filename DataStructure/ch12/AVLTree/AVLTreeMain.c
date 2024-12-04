@@ -37,4 +37,6 @@ int main(void)
 	clNode = GetLeftSubTree(clNode);
 	crNode = GetRightSubTree(crNode);
 	printf("left4: %d, right4: %d\n", GetData(clNode), GetData(crNode));
+
+	return 0;
 }
