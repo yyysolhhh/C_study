@@ -8,5 +8,5 @@
 ### [Data Structure](https://github.com/yyysolhhh/C_study/tree/main/DataStructure)  
 교재: [윤성우의 열혈 자료구조](https://product.kyobobook.co.kr/detail/S000001589149)  
 시작일: 2024년 10월 1일  
-종료예정일: 2024년 11월 20일
+종료일: 2024년 12월 18일
 
